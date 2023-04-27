@@ -3,8 +3,10 @@ import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import Category from "./pages/Category";
 import SearchResults from "./pages/SearchResults";
+import useVH from "react-viewport-height";
 
 function App() {
+  useVH();
   return (
     <div className="App">
       <Routes>
