@@ -11,6 +11,7 @@ function Home() {
   const [news, setNews] = useState<Article[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const [tabIndex, setTabIndex] = useState(0);
 
   useEffect(() => {
     const categories = [
@@ -65,6 +66,7 @@ function Home() {
 
   return (
     <section className="homepage pl-small">
+      {/* for desktop */}
       <h2 className="news-title inter-v inter-v--semi">News</h2>
       <div className="homepage__cards">
         {loading && <Spinner />}
@@ -73,6 +75,40 @@ function Home() {
         {news.map((article, url) => (
           <Card key={url} article={article} />
         ))}
+      </div>
+
+      {/* for small screens */}
+      <div className="homepage__small-screens">
+        <div className="homepage__small-screens__tabs">
+          <button
+            className={
+              tabIndex === 0 ? "tab tab--active" : "tab tab--not-active"
+            }
+            onClick={() => setTabIndex(0)}
+          >
+            Featured
+          </button>
+          <button
+            className={
+              tabIndex === 1 ? "tab tab--active" : "tab tab--not-active"
+            }
+            onClick={() => setTabIndex(1)}
+          >
+            Latest
+          </button>
+        </div>
+        {tabIndex === 0 && (
+          <div className="homepage__small-screens__cards">
+            {loading && <Spinner />}
+            {error && <Error />}
+            {news.map((article, url) => (
+              <Card key={url} article={article} />
+            ))}
+          </div>
+        )}
+        <div className="homepage__small-screens__latest">
+          {tabIndex === 1 && <Latest />}
+        </div>
       </div>
     </section>
   );
