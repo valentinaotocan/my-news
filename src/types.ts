@@ -7,6 +7,12 @@ export interface Article {
   publishedAt?: string;
 }
 
+export interface NavbarItems {
+  to: string;
+  icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
+  content: string;
+}
+
 export interface LatestNews {
   title: string;
   publishedAt: string;

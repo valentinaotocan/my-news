@@ -1,5 +1,6 @@
 import { Outlet, useLocation } from "react-router-dom";
 import Search from "./Search";
+import Navbar from "./Navbar";
 import Modal from "./Modal";
 
 function Layout() {
@@ -11,6 +12,7 @@ function Layout() {
       <div className="app-padding">
         <Search />
         <div className="flex pt-small">
+          <Navbar />
           <Outlet />
         </div>
       </div>
