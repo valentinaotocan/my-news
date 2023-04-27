@@ -34,11 +34,7 @@
       }
     }
   }
-  .line {
-    mix-blend-mode: normal;
-    opacity: 0.1;
-    border: 1px solid #979797;
-  }
+
   @media (max-width: toRem(768px)) {
     padding-top: toRem(24px);
     padding-bottom: toRem(32px);
@@ -60,5 +56,14 @@
       padding-right: 0;
       padding-bottom: toRem(20px);
     }
+  }
+}
+
+.line {
+  mix-blend-mode: normal;
+  opacity: 0.1;
+  border: 1px solid #979797;
+  @media (max-width: toRem(768px)) {
+    display: none;
   }
 }
