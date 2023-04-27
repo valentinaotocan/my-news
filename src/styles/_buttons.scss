@@ -1,0 +1,26 @@
+.btn {
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  &--white {
+    line-height: 1.43;
+    background-color: $white;
+    color: $dark-grey;
+    padding: toRem(10px) toRem(20px);
+    border-radius: 8px;
+    margin-right: 24px;
+    z-index: 1;
+  }
+  &--red {
+    position: absolute;
+    right: toRem(5px);
+    background-color: $dark-orange;
+    border-radius: 6px;
+    line-height: 1.33;
+    font-size: toRem(15px);
+    padding: toRem(10px) toRem(16px);
+    @media (max-width: toRem(768px)) {
+      display: none;
+    }
+  }
+}
