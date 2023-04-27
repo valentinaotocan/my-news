@@ -1,0 +1,35 @@
+.modal {
+  display: flex;
+  align-items: center;
+  position: relative;
+  min-height: toRem(60px);
+  width: 100%;
+  background: $linear-dark-orange;
+  font-size: toRem(14px);
+  overflow: hidden;
+  &__heading {
+    padding: toRem(10px) toRem(46px) toRem(10px) 0;
+    font-size: 16px;
+    line-height: 1.31;
+    letter-spacing: -0.136px;
+  }
+  img {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: toRem(401px);
+  }
+  &__paragraph {
+    padding-right: 273px;
+    letter-spacing: -0.119px;
+  }
+  &__no-thanks {
+    line-height: 1.43;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  @media (max-width: toRem(768px)) {
+    display: none;
+  }
+}
