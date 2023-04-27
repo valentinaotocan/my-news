@@ -77,4 +77,17 @@
       opacity: 1;
     }
   }
+
+  @media (max-width: toRem(425px)) {
+    padding-right: toRem(15px);
+    &__infinite-container {
+      // firefox
+      scrollbar-width: none;
+      // chrome, safari
+      &::-webkit-scrollbar {
+        width: 0;
+        background-color: 0;
+      }
+    }
+  }
 }
