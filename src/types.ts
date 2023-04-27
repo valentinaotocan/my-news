@@ -6,3 +6,8 @@ export interface Article {
   category: string;
   publishedAt?: string;
 }
+
+export interface LatestNews {
+  title: string;
+  publishedAt: string;
+}

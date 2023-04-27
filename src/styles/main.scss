@@ -2,3 +2,68 @@
 @import "colors";
 @import "fonts";
 @import "functions";
+
+@import "../styles/components/Card";
+@import "../styles/components/Latest";
+
+@import "../styles/pages/Home";
+
+// utilities
+a {
+  text-decoration: none;
+}
+
+.App {
+  background-color: $light-grey;
+  padding-bottom: toRem(61px);
+  min-height: calc(var(--vh, 1vh) * 100);
+  @media (max-width: toRem(768px)) {
+    padding-bottom: toRem(28px);
+  }
+}
+
+.app-padding {
+  padding-left: toRem(175px);
+  padding-right: toRem(167px);
+  @media (max-width: toRem(1100px)) {
+    padding-left: toRem(60px);
+    padding-right: toRem(60px);
+  }
+  @media (max-width: toRem(890px)) {
+    padding-left: toRem(16px);
+    padding-right: toRem(16px);
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.pl-small {
+  padding-left: toRem(25px);
+  @media (max-width: toRem(890px)) {
+    padding-left: toRem(16px);
+  }
+  @media (max-width: toRem(768px)) {
+    padding-left: 0;
+  }
+}
+
+.pt-small {
+  padding-top: toRem(24.5px);
+  @media (max-width: toRem(768px)) {
+    padding-top: 0;
+  }
+}
+
+.news-title {
+  font-size: toRem(18px);
+  line-height: 1.33;
+  letter-spacing: toRem(-0.153px);
+  color: $dark-grey;
+  padding-bottom: toRem(16px);
+  text-transform: capitalize;
+  @media (max-width: (toRem(768px))) {
+    display: none;
+  }
+}

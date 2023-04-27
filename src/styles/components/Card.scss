@@ -1,0 +1,54 @@
+.card {
+  max-width: toRem(322px);
+  width: 100%;
+  height: toRem(252px);
+  position: relative;
+  img {
+    height: toRem(213px);
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+  }
+  &__text {
+    width: 100%;
+    height: toRem(112px);
+    background-color: $white;
+    position: absolute;
+    z-index: 1;
+    top: toRem(140px);
+    border-radius: 0 0 8px 8px;
+    padding: toRem(12px) toRem(12px) toRem(16px) toRem(12px);
+    display: flex;
+    flex-direction: column;
+    &__category {
+      font-size: toRem(10px);
+      line-height: 1.6;
+      letter-spacing: toRem(-0.153px);
+      text-transform: uppercase;
+      color: $blue;
+      padding-bottom: toRem(2px);
+    }
+    &__title {
+      font-size: toRem(16px);
+      line-height: 1.25;
+      letter-spacing: toRem(-0.11px);
+      color: $black;
+      max-width: 100%;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+    }
+    &__author {
+      font-size: toRem(12px);
+      line-height: 1.17;
+      letter-spacing: toRem(-0.0675px);
+      color: $dark-grey;
+      margin-top: auto;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+    }
+  }
+}
