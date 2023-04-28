@@ -12,13 +12,13 @@ function SearchResults() {
 
   return (
     <>
-      {!loading && !error && searchedResults.length === 0 && (
-        <p className="clr-dark-orange inter-v">
-          No results with the term(s) you have entered. Please try again with
-          something else.
-        </p>
-      )}
-      <div className="pl-small">
+      <div className="pl-small w-100">
+        {!loading && !error && searchedResults.length === 0 && (
+          <p className="clr-dark-orange inter-v text-center">
+            No results with the term(s) you have entered. Please try again with
+            something else.
+          </p>
+        )}
         <div className="cards">
           {typeof searchedResults !== "undefined" &&
             searchedResults.map((article, index) => {

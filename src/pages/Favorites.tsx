@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { FavoritesContext } from "../components/context/FavoritesContext";
-import { Article } from "../types";
 import Card from "../components/Card";
 
 function Favorites() {
@@ -9,7 +8,7 @@ function Favorites() {
 
   return (
     <>
-      <div className="pl-small">
+      <div className="pl-small w-100">
         <h2 className="news-title inter-v inter-v--semi">My Favorites</h2>
         <div className="cards">
           {favorites.length > 0 ? (
