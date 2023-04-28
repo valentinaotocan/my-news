@@ -76,6 +76,7 @@
           grid-template-columns: repeat(auto-fill, (toRem(95px)));
           width: 100%;
           justify-content: center;
+          grid-gap: toRem(16px);
         }
         .nav-link {
           width: toRem(95px);
