@@ -51,4 +51,19 @@
       max-width: 100%;
     }
   }
+  @media (max-width: toRem(768px)) {
+    max-width: toRem(343px);
+    height: toRem(260px);
+    img {
+      height: toRem(226.3px);
+    }
+    &__text {
+      height: toRem(92px);
+      top: toRem(167px);
+      padding: toRem(15px) toRem(46.04px) toRem(19px) toRem(17px);
+      &__author {
+        display: none;
+      }
+    }
+  }
 }
