@@ -7,13 +7,13 @@ import App from "./App";
 import "./styles/main.scss";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <BrowserRouter>
-    <FavoritesContextProvider>
-      <React.StrictMode>
+  <React.StrictMode>
+    <BrowserRouter>
+      <FavoritesContextProvider>
         <SearchContextProvider>
           <App />
         </SearchContextProvider>
-      </React.StrictMode>
-    </FavoritesContextProvider>
-  </BrowserRouter>
+      </FavoritesContextProvider>
+    </BrowserRouter>
+  </React.StrictMode>
 );
