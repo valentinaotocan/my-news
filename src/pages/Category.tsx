@@ -37,7 +37,7 @@ function Category() {
   }, [categoryId]);
 
   return (
-    <div className="pl-small">
+    <div className="pl-small w-100">
       <h2 className="news-title inter-v inter-v--semi">{categoryId}</h2>
       <div className="cards">
         {loading && <Spinner />}

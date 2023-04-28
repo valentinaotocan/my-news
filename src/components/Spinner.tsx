@@ -14,10 +14,10 @@ function Spinner() {
   }
 `;
   return (
-    <>
+    <div className="flex-fd-c-ai-c w-100">
       <style>{keyframes}</style>
       <div style={spinner}></div>
-    </>
+    </div>
   );
 }
 
