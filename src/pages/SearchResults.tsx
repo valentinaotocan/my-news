@@ -9,7 +9,7 @@ function SearchResults() {
 
   return (
     <>
-      {searchedResults.length === 0 && (
+      {!loading && !error && searchedResults.length === 0 && (
         <p className="clr-dark-orange inter-v">
           No results with the term(s) you have entered. Please try again with
           something else.
