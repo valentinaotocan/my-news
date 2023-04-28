@@ -5,17 +5,22 @@ import {
   ContextProviderType,
 } from "../../types";
 
-const FavoritesContext = createContext<FavoritesContextType>({
+export const FavoritesContext = createContext<FavoritesContextType>({
   favorites: [],
+  favoritesChecker: () => false,
   addToFavorites: () => {},
   removeFromFavorites: () => {},
 });
 
 export const FavoritesContextProvider = ({ children }: ContextProviderType) => {
-  const initialFavorites: Article[] = localStorage.getItem("my-favorite")
+  const initialValue: Article[] = localStorage.getItem("my-favorite")
     ? JSON.parse(localStorage.getItem("my-favorite")!)
     : [];
-  const [favorites, setFavorites] = useState(initialFavorites);
+  const [favorites, setFavorites] = useState(initialValue);
+
+  const favoritesChecker = (article: Article) => {
+    return favorites.map((fav) => fav.url).includes(article.url);
+  };
 
   const addToFavorites = (article: Article) => {
     const myFavorites = [...favorites, article];
@@ -33,7 +38,12 @@ export const FavoritesContextProvider = ({ children }: ContextProviderType) => {
 
   return (
     <FavoritesContext.Provider
-      value={{ favorites, addToFavorites, removeFromFavorites }}
+      value={{
+        favorites,
+        favoritesChecker,
+        addToFavorites,
+        removeFromFavorites,
+      }}
     >
       {children}
     </FavoritesContext.Provider>

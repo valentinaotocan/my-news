@@ -9,6 +9,25 @@
     object-fit: cover;
     border-radius: 8px 8px 0 0;
   }
+  &__star {
+    position: absolute;
+    z-index: 1;
+    top: toRem(-4px);
+    left: toRem(-5px);
+    width: toRem(33px);
+    height: toRem(30px);
+    display: flex;
+    place-items: center;
+    border-bottom-right-radius: 8px;
+    border: none;
+    cursor: pointer;
+    &--yellow {
+      color: $yellow;
+    }
+    &--black {
+      color: $black;
+    }
+  }
   &__text {
     width: 100%;
     height: toRem(112px);

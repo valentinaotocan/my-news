@@ -13,6 +13,13 @@ export interface NavbarItems {
   content: string;
 }
 
+export interface CardProps {
+  article: Article;
+  favoritesChecker: (article: Article) => boolean;
+  addToFavorites: (article: Article) => void;
+  removeFromFavorites: (article: Article) => void;
+}
+
 export interface LatestNews {
   title: string;
   publishedAt: string;
@@ -33,6 +40,7 @@ export interface ContextProviderType {
 
 export interface FavoritesContextType {
   favorites: Article[];
+  favoritesChecker: (article: Article) => boolean;
   addToFavorites: (article: Article) => void;
   removeFromFavorites: (article: Article) => void;
 }
