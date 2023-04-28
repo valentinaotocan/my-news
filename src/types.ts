@@ -27,6 +27,12 @@ export interface SearchContextType {
   setError: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export interface SearchContextProviderType {
+export interface ContextProviderType {
   children: React.ReactNode;
+}
+
+export interface FavoritesContextType {
+  favorites: Article[];
+  addToFavorites: (article: Article) => void;
+  removeFromFavorites: (article: Article) => void;
 }
