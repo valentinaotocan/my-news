@@ -72,10 +72,10 @@
           }
         }
         &__links {
-          display: flex;
-          flex-wrap: wrap;
-          padding-left: toRem(14px);
-          padding-right: toRem(12px);
+          display: grid;
+          grid-template-columns: repeat(auto-fill, (toRem(95px)));
+          width: 100%;
+          justify-content: center;
         }
         .nav-link {
           width: toRem(95px);
