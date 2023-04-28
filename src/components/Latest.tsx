@@ -70,41 +70,42 @@ function Latest() {
       </div>
 
       <div className="latest__infinite-container" ref={ref}>
-        <InfiniteScroll
-          pageStart={0}
-          loadMore={loadMoreArticles}
-          hasMore={hasMore}
-          loader={
-            <p className="clr-dark-orange" key={0}>
-              Loading...
-            </p>
-          }
-          getScrollParent={getScrollParent}
-          useWindow={false}
-        >
-          {errorLatest && (
-            <p className="clr-dark-orange">
-              Error fetching news <b>&#9785;</b>
-            </p>
-          )}
-          {!errorLatest &&
-            latestNews &&
-            latestNews.map((item, index) => (
-              <div key={index}>
-                <p className="date inter-v inter-v--bold">
-                  {new Date(item.publishedAt).toLocaleTimeString([], {
-                    hour12: false,
-                    hour: "2-digit",
-                    minute: "2-digit",
-                  })}
-                </p>
-                <h3 className="subtitle inter-v inter-v--medium">
-                  {item.title}
-                </h3>
-                <div className="smaller-line"></div>
-              </div>
-            ))}
-        </InfiniteScroll>
+        {!errorLatest && (
+          <InfiniteScroll
+            pageStart={0}
+            loadMore={loadMoreArticles}
+            hasMore={hasMore}
+            loader={
+              <p className="clr-dark-orange inter-v" key={0}>
+                Loading...
+              </p>
+            }
+            getScrollParent={getScrollParent}
+            useWindow={false}
+          >
+            {latestNews &&
+              latestNews.map((item, index) => (
+                <div key={index}>
+                  <p className="date inter-v inter-v--bold">
+                    {new Date(item.publishedAt).toLocaleTimeString([], {
+                      hour12: false,
+                      hour: "2-digit",
+                      minute: "2-digit",
+                    })}
+                  </p>
+                  <h3 className="subtitle inter-v inter-v--medium">
+                    {item.title}
+                  </h3>
+                  <div className="smaller-line"></div>
+                </div>
+              ))}
+          </InfiniteScroll>
+        )}
+        {errorLatest && (
+          <p className="clr-dark-orange inter-v">
+            Error fetching news <b>&#9785;</b>
+          </p>
+        )}
       </div>
       <div className="latest__bottom flex">
         <p className="latest__bottom__paragraph inter-v inter-v--medium">
