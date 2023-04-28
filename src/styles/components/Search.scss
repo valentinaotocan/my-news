@@ -26,9 +26,9 @@
       line-height: 1.33;
       font-size: toRem(15px);
       line-height: 1.33;
-      color: #1d1d1b;
+      color: $dark-grey;
       &::placeholder {
-        color: #1d1d1b;
+        color: $dark-grey;
         mix-blend-mode: normal;
         opacity: 0.4;
       }
