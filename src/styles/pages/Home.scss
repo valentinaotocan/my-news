@@ -37,8 +37,11 @@
           &--active {
             color: $dark-orange;
             padding: toRem(10px) toRem(16px);
-            background: rgba(187, 30, 30, 0.1);
+            background: #bb1e1e1a;
             border-radius: 20px;
+          }
+          &--not-active {
+            background: none;
           }
         }
       }

@@ -1,10 +1,9 @@
 .latest {
-  background: #ffffff;
+  background: $white;
   box-shadow: 0px 1px 2px -1px #c8cad1;
   border-radius: 8px;
   width: toRem(321px);
-  padding-top: toRem(18px);
-  padding-left: toRem(15px);
+  padding: toRem(18px) toRem(7px) 0 toRem(15px);
   grid-column: -1;
   grid-row: -1 / span 2;
   display: flex;
@@ -27,11 +26,19 @@
   &__infinite-container {
     overflow-y: scroll;
     max-height: 432px;
+    scrollbar-color: #0000003d transparent;
+    scrollbar-width: 4px;
     &::-webkit-scrollbar {
       width: 4px;
     }
     &::-webkit-scrollbar-thumb {
-      background: rgba(0, 0, 0, 0.237981);
+      background: #0000003d;
+      border-radius: 2px;
+      width: 4px;
+      height: 68px;
+    }
+    &::-moz-scrollbar-thumb {
+      background-color: #0000003d;
       border-radius: 2px;
       width: 4px;
       height: 68px;
@@ -44,7 +51,7 @@
     }
     .subtitle {
       font-size: toRem(16px);
-      padding: toRem(3px) 0 toRem(13px) 0;
+      padding: toRem(3px) 0 toRem(14px) 0;
       line-height: 1.25;
       letter-spacing: toRem(-0.11px);
       color: $black;
@@ -87,6 +94,10 @@
       scrollbar-width: none;
       // chrome, safari
       &::-webkit-scrollbar {
+        width: 0;
+        background-color: 0;
+      }
+      &::-moz-scrollbar {
         width: 0;
         background-color: 0;
       }

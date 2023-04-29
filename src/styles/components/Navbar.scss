@@ -33,7 +33,7 @@
   }
 
   .mb-4 {
-    margin-bottom: 4px;
+    margin-bottom: toRem(4px);
   }
 
   @media (max-width: toRem(768px)) {
@@ -81,6 +81,9 @@
         .nav-link {
           width: toRem(95px);
           height: toRem(95px);
+          &--active {
+            box-shadow: 0px 6px 36px rgba(0, 0, 0, 0.16);
+          }
         }
       }
     }
