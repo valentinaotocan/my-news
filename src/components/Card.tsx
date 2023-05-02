@@ -13,6 +13,7 @@ function Card({
       <img
         src={article.urlToImage || defaultImage}
         alt={article.title || "Default Image"}
+        onError={(e) => (e.currentTarget.src = defaultImage)}
       />
       {favoritesChecker(article) ? (
         <button
