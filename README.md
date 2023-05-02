@@ -5,7 +5,7 @@ My News is a news website with articles from different categories sorted chronol
 <br />
 Homepage also contains the latest news widget which has infinite scroll functionality. <br />
 The user can also click on a category in the sidebar which will take them to the category page containing articles from that category. <br />
-The search component is always present, except on the favorites page, so the user can search for articles by their title. <br />
+The search component is always present, so the user can search for articles by their title. <br />
 The app has a feature to mark articles as favorites and save them to the favorites page. 
 <br />
 <hr />
