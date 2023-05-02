@@ -4,7 +4,7 @@ export interface Article {
   author: string;
   url: string;
   category: string;
-  publishedAt?: string;
+  publishedAt: string;
 }
 
 export interface NavbarItems {

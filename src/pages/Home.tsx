@@ -52,8 +52,8 @@ function Home() {
         );
         const sortArticles = withoutDuplicates.sort(
           (a, b) =>
-            new Date(b.publishedAt ?? "").getTime() -
-            new Date(a.publishedAt ?? "").getTime()
+            new Date(b.publishedAt).getTime() -
+            new Date(a.publishedAt).getTime()
         );
         const last16Articles = sortArticles.slice(0, 16);
         setNews(last16Articles);
