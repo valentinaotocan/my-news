@@ -6,21 +6,14 @@ import Spinner from "../components/Spinner";
 import Error from "../components/Error";
 import Card from "../components/Card";
 
+const apiKey = import.meta.env.VITE_API_KEY;
+
 function Category() {
   const { categoryId } = useParams();
   const [categoryArticles, setCategoryArticles] = useState<Article[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
-
-  const apiKey = import.meta.env.VITE_API_KEY;
-
-  const { favorites, addToFavorites, removeFromFavorites } =
-    useContext(FavoritesContext);
-
-  const favoritesChecker = (article: Article) => {
-    const isFavorite = favorites.some((fav) => fav.url === article.url);
-    return isFavorite;
-  };
+  const { favoritesChecker, addToFavorites, removeFromFavorites } = useContext(FavoritesContext);
 
   useEffect(() => {
     const fetchCategoryArticles = async () => {
