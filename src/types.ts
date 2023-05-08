@@ -15,9 +15,6 @@ export interface NavbarItems {
 
 export interface CardProps {
   article: Article;
-  favoritesChecker: (article: Article) => boolean;
-  addToFavorites: (article: Article) => void;
-  removeFromFavorites: (article: Article) => void;
 }
 
 export interface LatestNews {

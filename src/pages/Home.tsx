@@ -1,5 +1,4 @@
-import { useState, useEffect, useContext } from "react";
-import { FavoritesContext } from "../components/context/FavoritesContext";
+import { useState, useEffect } from "react";
 import { Article } from "../types";
 import Spinner from "../components/Spinner";
 import Error from "../components/Error";
@@ -13,8 +12,6 @@ function Home() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [tabIndex, setTabIndex] = useState(0);
-  const { favoritesChecker, addToFavorites, removeFromFavorites } =
-    useContext(FavoritesContext);
 
   useEffect(() => {
     const categories = [
@@ -76,13 +73,7 @@ function Home() {
         {error && <Error />}
         <Latest />
         {news.map((article, url) => (
-          <Card
-            key={url}
-            article={article}
-            favoritesChecker={favoritesChecker}
-            addToFavorites={addToFavorites}
-            removeFromFavorites={removeFromFavorites}
-          />
+          <Card key={url} article={article} />
         ))}
       </div>
 
@@ -111,13 +102,7 @@ function Home() {
             {loading && <Spinner />}
             {error && <Error />}
             {news.map((article, url) => (
-              <Card
-                key={url}
-                article={article}
-                favoritesChecker={favoritesChecker}
-                addToFavorites={addToFavorites}
-                removeFromFavorites={removeFromFavorites}
-              />
+              <Card key={url} article={article} />
             ))}
           </div>
         )}

@@ -1,6 +1,5 @@
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { FavoritesContext } from "../components/context/FavoritesContext";
 import { Article } from "../types";
 import Spinner from "../components/Spinner";
 import Error from "../components/Error";
@@ -13,7 +12,6 @@ function Category() {
   const [categoryArticles, setCategoryArticles] = useState<Article[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
-  const { favoritesChecker, addToFavorites, removeFromFavorites } = useContext(FavoritesContext);
 
   useEffect(() => {
     const fetchCategoryArticles = async () => {
@@ -45,13 +43,7 @@ function Category() {
         {loading && <Spinner />}
         {error && <Error />}
         {categoryArticles.map((article, index) => (
-          <Card
-            key={index}
-            article={article}
-            favoritesChecker={favoritesChecker}
-            addToFavorites={addToFavorites}
-            removeFromFavorites={removeFromFavorites}
-          />
+          <Card key={index} article={article} />
         ))}
       </div>
     </div>

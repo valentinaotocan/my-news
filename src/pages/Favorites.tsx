@@ -3,8 +3,7 @@ import { FavoritesContext } from "../components/context/FavoritesContext";
 import Card from "../components/Card";
 
 function Favorites() {
-  const { favorites, favoritesChecker, addToFavorites, removeFromFavorites } =
-    useContext(FavoritesContext);
+  const { favorites } = useContext(FavoritesContext);
 
   return (
     <>
@@ -13,13 +12,7 @@ function Favorites() {
         <div className="cards">
           {favorites.length > 0 ? (
             favorites.map((article, index) => (
-              <Card
-                key={index}
-                article={article}
-                favoritesChecker={favoritesChecker}
-                addToFavorites={addToFavorites}
-                removeFromFavorites={removeFromFavorites}
-              />
+              <Card key={index} article={article} />
             ))
           ) : (
             <p className="clr-dark-orange inter-v">

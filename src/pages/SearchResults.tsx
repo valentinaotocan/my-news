@@ -1,13 +1,10 @@
 import { useContext } from "react";
-import { FavoritesContext } from "../components/context/FavoritesContext";
 import { SearchContext } from "../components/context/SearchContext";
 import Card from "../components/Card";
 import Spinner from "../components/Spinner";
 import Error from "../components/Error";
 
 function SearchResults() {
-  const { favoritesChecker, addToFavorites, removeFromFavorites } =
-    useContext(FavoritesContext);
   const { searchedResults, loading, error } = useContext(SearchContext);
 
   return (
@@ -22,15 +19,7 @@ function SearchResults() {
         <div className="cards">
           {typeof searchedResults !== "undefined" &&
             searchedResults.map((article, index) => {
-              return (
-                <Card
-                  key={index}
-                  article={article}
-                  favoritesChecker={favoritesChecker}
-                  addToFavorites={addToFavorites}
-                  removeFromFavorites={removeFromFavorites}
-                />
-              );
+              return <Card key={index} article={article} />;
             })}
           {loading && <Spinner />}
           {error && <Error />}

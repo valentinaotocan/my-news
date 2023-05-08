@@ -1,13 +1,12 @@
-import { CardProps } from "../types";
+import { useContext } from "react";
+import { FavoritesContext } from "./context/FavoritesContext";
 import { ReactComponent as StarIcon } from "../assets/images/icons/star.svg";
+import { CardProps } from "../types";
 import defaultImage from "../assets/images/default-image.png";
 
-function Card({
-  article,
-  favoritesChecker,
-  addToFavorites,
-  removeFromFavorites,
-}: CardProps) {
+function Card({ article }: CardProps) {
+  const { favoritesChecker, addToFavorites, removeFromFavorites } =
+    useContext(FavoritesContext);
   return (
     <article className="card">
       <img
