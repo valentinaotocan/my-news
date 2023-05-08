@@ -3,7 +3,7 @@
   &__cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(322px, 1fr));
-    padding-right: 164px;
+    padding-right: toRem(164px);
     gap: toRem(21px);
   }
   &__small-screens {
@@ -32,7 +32,7 @@
           font-size: toRem(16px);
           line-height: 1.25;
           letter-spacing: toRem(-0.0246154px);
-          margin-right: 16px;
+          margin-right: toRem(16px);
           border: none;
           &--active {
             color: $dark-orange;
