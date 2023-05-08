@@ -4,10 +4,8 @@
   padding-top: toRem(35px);
   padding-bottom: toRem(28px);
   h1 {
-    color: $dark-grey;
     padding-right: toRem(43px);
-    font-size: toRem(32px);
-    line-height: 1.22;
+    @include text-style(toRem(32px), 1.22, $dark-grey);
   }
   &__container {
     position: relative;
@@ -20,17 +18,21 @@
       left: toRem(15px);
     }
     input {
-      width: 100%;
       height: toRem(50px);
       padding-left: toRem(50px);
-      line-height: 1.33;
-      font-size: toRem(15px);
-      line-height: 1.33;
-      color: $dark-grey;
+      @include text-style(toRem(15px), 1.33, $dark-grey);
+      background-color: $white;
+      box-shadow: 0px 1px 2px -1px #c8cad1;
+      border-radius: 10px;
+      border: none;
       &::placeholder {
         color: $dark-grey;
         mix-blend-mode: normal;
         opacity: 0.4;
+      }
+      &:focus {
+        outline: none;
+        border: none;
       }
     }
   }
@@ -44,7 +46,7 @@
       width: 100%;
       &__icon {
         width: toRem(16px);
-        width: toRem(16px);
+        height: toRem(16px);
       }
       input {
         height: toRem(48px);

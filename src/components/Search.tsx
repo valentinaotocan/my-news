@@ -68,12 +68,12 @@ function Search() {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             onKeyDown={handleKeyDown}
-            className="input-bg inter-v"
+            className="inter-v w-100"
           />
           <button
             type="button"
             onClick={handleSearch}
-            className="btn btn--red clr-white inter-v inter-v--bold"
+            className="btn btn--red inter-v inter-v--bold"
           >
             Search
           </button>

@@ -1,0 +1,8 @@
+@mixin text-style($size, $line-height, $color, $letter-spacing: null) {
+  font-size: $size;
+  line-height: $line-height;
+  color: $color;
+  @if $letter-spacing != null {
+    letter-spacing: $letter-spacing;
+  }
+}

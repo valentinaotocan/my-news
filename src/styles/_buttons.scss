@@ -3,21 +3,19 @@
   border: none;
   cursor: pointer;
   &--white {
-    line-height: 1.43;
+    @include text-style(toRem(14px), 1.43, $dark-grey);
     background-color: $white;
-    color: $dark-grey;
     padding: toRem(10px) toRem(20px);
     border-radius: 8px;
     margin-right: toRem(24px);
     z-index: 1;
   }
   &--red {
+    @include text-style(toRem(15px), 1.33, $white);
     position: absolute;
     right: toRem(5px);
     background-color: $dark-orange;
     border-radius: 6px;
-    line-height: 1.33;
-    font-size: toRem(15px);
     padding: toRem(10px) toRem(16px);
     @media (max-width: toRem(768px)) {
       display: none;

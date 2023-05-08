@@ -3,15 +3,11 @@
   align-items: center;
   position: relative;
   min-height: toRem(60px);
-  width: 100%;
   background: $linear-dark-orange;
-  font-size: toRem(14px);
   overflow: hidden;
   &__heading {
     padding: toRem(10px) toRem(46px) toRem(10px) 0;
-    font-size: toRem(16px);
-    line-height: 1.31;
-    letter-spacing: toRem(-0.136px);
+    @include text-style(toRem(16px), 1.31, $white, toRem(-0.136px));
   }
   img {
     height: 100%;
@@ -20,11 +16,11 @@
     left: toRem(401px);
   }
   &__paragraph {
+    @include text-style(toRem(14px), 1.5, $white, toRem(-0.119px));
     padding-right: toRem(273px);
-    letter-spacing: toRem(-0.119px);
   }
   &__no-thanks {
-    line-height: 1.43;
+    @include text-style(toRem(14px), 1.43, $white);
     cursor: pointer;
     z-index: 1;
   }

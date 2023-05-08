@@ -2,7 +2,7 @@ import shapeLine from "../assets/images/shape-line.png";
 
 function Modal() {
   return (
-    <div className="modal app-padding clr-white">
+    <div className="modal app-padding w-100">
       <h2 className="modal__heading inter-v inter-v--bold">
         Make MyNews your homepage
       </h2>

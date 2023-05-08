@@ -17,7 +17,8 @@
   }
   @media (max-width: toRem(768px)) {
     width: 100%;
-    &__cards {
+    &__cards,
+    .news-title {
       display: none;
     }
     &__small-screens {
@@ -29,9 +30,7 @@
         .tab {
           font-family: "Inter var", sans-serif;
           font-weight: 600;
-          font-size: toRem(16px);
-          line-height: 1.25;
-          letter-spacing: toRem(-0.0246154px);
+          @include text-style(toRem(16px), 1.25, $dark-grey, toRem(-0.02px));
           margin-right: toRem(16px);
           border: none;
           &--active {

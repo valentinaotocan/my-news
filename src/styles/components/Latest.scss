@@ -1,5 +1,5 @@
 .latest {
-  background: $white;
+  background-color: $white;
   box-shadow: 0px 1px 2px -1px #c8cad1;
   border-radius: 8px;
   width: toRem(321px);
@@ -17,10 +17,7 @@
       padding-right: toRem(10px);
     }
     h2 {
-      font-size: toRem(16px);
-      line-height: 1.25;
-      letter-spacing: toRem(-0.11px);
-      color: $black;
+      @include text-style(toRem(16px), 1.25, $black, toRem(-0.11px));
     }
   }
   &__infinite-container {
@@ -44,17 +41,12 @@
       height: 68px;
     }
     .date {
+      @include text-style(toRem(10px), 1.6, $blue, toRem(-0.02px));
       padding-top: toRem(13px);
-      font-size: toRem(10px);
-      line-height: 1.6;
-      color: $blue;
     }
     .subtitle {
-      font-size: toRem(16px);
+      @include text-style(toRem(16px), 1.25, $black, toRem(-0.11px));
       padding: toRem(3px) 0 toRem(14px) 0;
-      line-height: 1.25;
-      letter-spacing: toRem(-0.11px);
-      color: $black;
       max-width: toRem(281px);
     }
     .smaller-line {
@@ -65,10 +57,7 @@
   &__bottom {
     padding: toRem(15px) 0;
     &__paragraph {
-      color: $blue;
-      font-size: toRem(14px);
-      line-height: 1.43;
-      letter-spacing: toRem(-0.09625px);
+      @include text-style(toRem(14px), 1.43, $blue, toRem(-0.1px));
     }
     &__arrow {
       padding-left: toRem(2px);

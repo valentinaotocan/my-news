@@ -40,18 +40,12 @@
     display: flex;
     flex-direction: column;
     &__category {
-      font-size: toRem(10px);
-      line-height: 1.6;
-      letter-spacing: toRem(-0.153px);
+      @include text-style(toRem(10px), 1.6, $blue, toRem(-0.02px));
       text-transform: uppercase;
-      color: $blue;
       padding-bottom: toRem(2px);
     }
     &__title {
-      font-size: toRem(16px);
-      line-height: 1.25;
-      letter-spacing: toRem(-0.11px);
-      color: $black;
+      @include text-style(toRem(16px), 1.25, $black, toRem(-0.11px));
       max-width: 100%;
       display: -webkit-box;
       -webkit-box-orient: vertical;
@@ -59,10 +53,7 @@
       overflow: hidden;
     }
     &__author {
-      font-size: toRem(12px);
-      line-height: 1.17;
-      letter-spacing: toRem(-0.0675px);
-      color: $dark-grey;
+      @include text-style(toRem(12px), 1.17, $dark-grey, toRem(-0.07px));
       margin-top: auto;
       white-space: nowrap;
       overflow: hidden;
