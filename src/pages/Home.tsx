@@ -72,8 +72,8 @@ function Home() {
         {loading && <Spinner />}
         {error && <Error />}
         <Latest />
-        {news.map((article, url) => (
-          <Card key={url} article={article} />
+        {news.map((article) => (
+          <Card key={article.url} article={article} />
         ))}
       </div>
 
@@ -101,8 +101,8 @@ function Home() {
           <div className="homepage__small-screens__cards">
             {loading && <Spinner />}
             {error && <Error />}
-            {news.map((article, url) => (
-              <Card key={url} article={article} />
+            {news.map((article) => (
+              <Card key={article.url} article={article} />
             ))}
           </div>
         )}

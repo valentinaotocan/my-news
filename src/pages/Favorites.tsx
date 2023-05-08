@@ -16,8 +16,8 @@ function Favorites() {
         <h2 className="news-title inter-v inter-v--semi">My Favorites</h2>
         <div className="cards">
           {sortedFavoritesFromNew.length > 0 ? (
-            sortedFavoritesFromNew.map((article, index) => (
-              <Card key={index} article={article} />
+            sortedFavoritesFromNew.map((article) => (
+              <Card key={article.url} article={article} />
             ))
           ) : (
             <p className="clr-dark-orange inter-v">

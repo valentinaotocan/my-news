@@ -18,8 +18,8 @@ function SearchResults() {
         )}
         <div className="cards">
           {typeof searchedResults !== "undefined" &&
-            searchedResults.map((article, index) => {
-              return <Card key={index} article={article} />;
+            searchedResults.map((article) => {
+              return <Card key={article.url} article={article} />;
             })}
           {loading && <Spinner />}
           {error && <Error />}

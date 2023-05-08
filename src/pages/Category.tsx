@@ -42,8 +42,8 @@ function Category() {
       <div className="cards">
         {loading && <Spinner />}
         {error && <Error />}
-        {categoryArticles.map((article, index) => (
-          <Card key={index} article={article} />
+        {categoryArticles.map((article) => (
+          <Card key={article.url} article={article} />
         ))}
       </div>
     </div>
