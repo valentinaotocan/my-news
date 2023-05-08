@@ -5,7 +5,7 @@ My News is a news website with articles from different categories sorted chronol
 <br />
 Homepage also contains the latest news widget which has infinite scroll functionality. <br />
 The user can also click on a category in the sidebar which will take them to the category page containing articles from that category. <br />
-The search component is always present, except on the favorites page, so the user can search for articles by their title. <br />
+The search component is always present, so the user can search for articles by their title. <br />
 The app has a feature to mark articles as favorites and save them to the favorites page. 
 <br />
 <hr />
@@ -33,6 +33,8 @@ In this project I used:
 I fetch data from https://newsapi.org/. It is straightforward to use and has a easily readable documentation. <br /> 
 NewsAPI developer plan allows for local-only use, therefore I have pushed .env to Github so you don't have to register to get an API key. <br />
 I know it's not correct to make your API keys public, but I wanted to save your time.
+<br />
+☢️ On the topic what is not correct, I know that useEffect might not be the most ideal approach for this project, for example React Query library would be much better because it would reduce the number of API requests, but I'm not confident with it <b>yet</b>.
 <hr />
 
 ### 🖌️ Design choices
