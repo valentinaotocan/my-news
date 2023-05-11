@@ -34,7 +34,7 @@ I fetch data from https://newsapi.org/. It is straightforward to use and has a e
 NewsAPI developer plan allows for local-only use, therefore I have pushed .env to Github so you don't have to register to get an API key. <br />
 I know it's not correct to make your API keys public, but I wanted to save your time.
 <br />
-☢️ On the topic of what is not correct, I know that useEffect might not be the most ideal approach for this project, for example React Query library would be much better because it would reduce the number of API requests, but I'm not confident with it <b>yet</b>.
+☢️ On the topic of what is not correct, I know that useEffect might not be the most ideal approach for this project, for example React Query library would be much better because it would reduce unnecessary re-rendering and the number of API requests, but I'm not confident with it <b>yet</b>.
 <hr />
 
 ### 🖌️ Design choices
